@@ -21,5 +21,28 @@ public class PomodoroPresenter
     {
         pomodoro.SetTimeLeft(time);
     }
-
+    public void CountDown()
+    {
+        pomodoro.CountDown();
+    }
+    public void SetResting()
+    {
+        pomodoro.SetResting();
+    }
+    public void SetInitialized()
+    {
+        pomodoro.SetInitialized();
+    }
+    public void SetStoped()
+    {
+        pomodoro.SetStoped();
+    }
+    public void SetFinished()
+    {
+        pomodoro.SetFinished();
+    }
+    public string GetState()
+    {
+        return pomodoro.GetState();
+    }
 }

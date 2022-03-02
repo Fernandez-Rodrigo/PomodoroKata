@@ -48,10 +48,42 @@ public class TimerShould
         pomodoro.GetState();
 
         //Assert
-        Assert.AreEqual("Parado", pomodoro.GetState());
+        Assert.AreEqual("Stoped", pomodoro.GetState());
     }
 
+    [Test]
+    public void RestTimeWhenCountdown()
+    {
+        //Arrange
+        Pomodoro pomodoro = new Pomodoro();
+        float timeStart = pomodoro.GetTimeLeft();
+        pomodoro.SetInitialized();
+        //Act
+        pomodoro.CountDown();
+        float timeBeforeCountdown = pomodoro.GetTimeLeft();
 
+        //Assert
+        Assert.Less(timeBeforeCountdown, timeStart);
+    }
+
+    [Test]
+    public void CantFinishIfIsNotResting()
+    {
+        //Arrange
+        Pomodoro pomodoro = new Pomodoro();
+        string timeStart = pomodoro.GetState();
+        //Act
+
+    }
+    [Test]
+    public void CantRestIfIsNotInitialized()
+    {
+        //Arrange
+        Pomodoro pomodoro = new Pomodoro();
+        string timeStart = pomodoro.GetState();
+        //Act
+
+    }
 
 }
 

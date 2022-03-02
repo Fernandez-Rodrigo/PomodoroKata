@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 351253955}
   - component: {fileID: 351253954}
   m_Layer: 5
-  m_Name: Timer
+  m_Name: TimerTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,13 +419,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 424628324}
   m_TextComponent: {fileID: 176681039}
   m_Placeholder: {fileID: 2066122993}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 458039190}
   - component: {fileID: 458039189}
   - component: {fileID: 458039188}
+  - component: {fileID: 458039192}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -579,6 +580,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &458039192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458039187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfaca49364945194497feb21979ee136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeInput: {fileID: 424628323}
+  timeText: {fileID: 351253954}
+  startButton: {fileID: 822015785}
+  stopButton: {fileID: 1192543956}
 --- !u!1 &463245384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1272,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015786}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 458039192}
+        m_TargetAssemblyTypeName: PomodoroView, PomodoroAD
+        m_MethodName: StartCountDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &822015786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1592,7 +1621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1192543957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 458039192}
+        m_TargetAssemblyTypeName: PomodoroView, PomodoroAD
+        m_MethodName: StopCountDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1192543957
 MonoBehaviour:
   m_ObjectHideFlags: 0
