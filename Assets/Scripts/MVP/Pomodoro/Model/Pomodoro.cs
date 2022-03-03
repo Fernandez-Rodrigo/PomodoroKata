@@ -6,6 +6,7 @@ using UnityEngine;
 public class Pomodoro 
 {
     private const float DEFAULT_INIT_TIME = 25;
+    private float totalRestingTime;
     private float restingTime;
     private float timeLeft;
     private States state;
@@ -24,11 +25,16 @@ public class Pomodoro
     {
         timeLeft = selectedTime;
         restingTime = Mathf.Floor(selectedTime  * 5 / 25);
+        totalRestingTime = restingTime;
         if (restingTime == 0) restingTime = 1;
     }
     public float GetRestingTime()
     {
         return restingTime;
+    }
+    public float GetTotalRestingTime()
+    {
+        return totalRestingTime;
     }
     public States GetState()
     {

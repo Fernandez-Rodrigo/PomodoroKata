@@ -21,6 +21,10 @@ public class PomodoroPresenter
     {
         return pomodoro.GetRestingTime();
     }
+    public float GetTotalRestingTime()
+    {
+        return pomodoro.GetTotalRestingTime();
+    }
     public void SetStudyTime(float time)
     {
         pomodoro.SetStudyAndRestingTime(time);

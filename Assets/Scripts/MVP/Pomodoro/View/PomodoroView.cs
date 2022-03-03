@@ -11,6 +11,8 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
     [SerializeField]
     private Image loadingBar;
     [SerializeField]
+    private Image restingLoadingBar;
+    [SerializeField]
     private TextMeshProUGUI pomodoroText;
     [SerializeField]
     private TextMeshProUGUI pomodoroStateText;
@@ -30,6 +32,8 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
         ManageStates();
         //TODO : hacerlo con unirx
         loadingBar.fillAmount = mainSceneView.timeInput.text != "" ? GetCurrentStudyTime() / float.Parse(mainSceneView.timeInput.text) : 1;
+        restingLoadingBar.fillAmount = GetCurrentStudyTime() == 0 ? GetCurrentRestingTime() / _pomodoroPresenter.GetTotalRestingTime() : 1;
+  //      restingLoadingBar.fillAmount = GetCurrentRestingTime() == 0 ? 0 : 1;
         pomodoroStateText.text = _pomodoroPresenter.GetState().ToString();
     }
 
