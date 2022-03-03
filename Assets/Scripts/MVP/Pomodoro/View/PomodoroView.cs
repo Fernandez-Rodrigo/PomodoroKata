@@ -33,7 +33,7 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
         //TODO : hacerlo con unirx
         loadingBar.fillAmount = mainSceneView.timeInput.text != "" ? GetCurrentStudyTime() / float.Parse(mainSceneView.timeInput.text) : 1;
         restingLoadingBar.fillAmount = GetCurrentStudyTime() == 0 ? GetCurrentRestingTime() / _pomodoroPresenter.GetTotalRestingTime() : 1;
-  //      restingLoadingBar.fillAmount = GetCurrentRestingTime() == 0 ? 0 : 1;
+        restingLoadingBar.fillAmount = GetCurrentRestingTime() == 0 ? 0 : GetCurrentRestingTime();
         pomodoroStateText.text = _pomodoroPresenter.GetState().ToString();
     }
 
