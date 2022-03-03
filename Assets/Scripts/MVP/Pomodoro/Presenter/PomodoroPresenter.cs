@@ -1,3 +1,4 @@
+using Assets.Scripts.Pomodoro.Enums;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,18 +13,25 @@ public class PomodoroPresenter
         pomodoroView = _pomodoroView;   
     }
 
-    public float GetTimeLeft()
+    public float GetStudyTime()
     {
-        return pomodoro.GetTimeLeft();
+        return pomodoro.GetStudyTime();
     }
-
-    public void SetTimeLeft(float time)
+    public float GetRestingTime()
     {
-        pomodoro.SetTimeLeft(time);
+        return pomodoro.GetRestingTime();
     }
-    public void CountDown()
+    public void SetStudyTime(float time)
     {
-        pomodoro.CountDown();
+        pomodoro.SetStudyAndRestingTime(time);
+    }
+    public void StudyCountDown()
+    {
+        pomodoro.StudyCountDown();
+    }
+    public void RestingCountDown()
+    {
+        pomodoro.RestingCountDown();
     }
     public void SetResting()
     {
@@ -41,8 +49,12 @@ public class PomodoroPresenter
     {
         pomodoro.SetFinished();
     }
-    public string GetState()
+    public States GetState()
     {
         return pomodoro.GetState();
+    }
+    public float GetDefaultInitTime()
+    {
+        return pomodoro.GetDefaultInitTime();
     }
 }
