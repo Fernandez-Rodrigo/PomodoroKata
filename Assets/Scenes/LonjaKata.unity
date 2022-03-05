@@ -340,13 +340,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 50739341}
   m_TextComponent: {fileID: 1294319160}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -498,13 +498,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 85920009}
   m_TextComponent: {fileID: 141889616}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1029,13 +1029,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416293313}
   m_TextComponent: {fileID: 798688518}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1187,13 +1187,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460819644}
   m_TextComponent: {fileID: 578883812}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1431,6 +1431,7 @@ GameObject:
   - component: {fileID: 596993150}
   - component: {fileID: 596993152}
   - component: {fileID: 596993151}
+  - component: {fileID: 596993153}
   m_Layer: 5
   m_Name: VentaTotalBarc
   m_TagString: Untagged
@@ -1554,6 +1555,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596993149}
   m_CullTransparentMesh: 1
+--- !u!114 &596993153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596993149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db8060f249f827446bfb738b8add03f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vieiraPriceField: {fileID: 1114444233}
+  centollaPriceField: {fileID: 1770136031}
+  pulpoPriceField: {fileID: 1819980727}
+  resultText: {fileID: 596993151}
 --- !u!1 &723360695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,13 +2246,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1114444234}
   m_TextComponent: {fileID: 1668396937}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -2398,6 +2415,7 @@ GameObject:
   - component: {fileID: 1180661290}
   - component: {fileID: 1180661292}
   - component: {fileID: 1180661291}
+  - component: {fileID: 1180661293}
   m_Layer: 5
   m_Name: VentaTotalMadrid
   m_TagString: Untagged
@@ -2521,6 +2539,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180661289}
   m_CullTransparentMesh: 1
+--- !u!114 &1180661293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180661289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db8060f249f827446bfb738b8add03f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vieiraPriceField: {fileID: 85920008}
+  centollaPriceField: {fileID: 1912301084}
+  pulpoPriceField: {fileID: 50739340}
+  resultText: {fileID: 1180661291}
 --- !u!1 &1294319158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,6 +2779,7 @@ GameObject:
   - component: {fileID: 1449870492}
   - component: {fileID: 1449870494}
   - component: {fileID: 1449870493}
+  - component: {fileID: 1449870495}
   m_Layer: 5
   m_Name: VentaTotalLisboa
   m_TagString: Untagged
@@ -2868,6 +2903,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449870491}
   m_CullTransparentMesh: 1
+--- !u!114 &1449870495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449870491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db8060f249f827446bfb738b8add03f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vieiraPriceField: {fileID: 460819643}
+  centollaPriceField: {fileID: 416293312}
+  pulpoPriceField: {fileID: 1864998667}
+  resultText: {fileID: 1449870493}
 --- !u!1 &1515542459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,13 +3294,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1770136032}
   m_TextComponent: {fileID: 1515542461}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -3401,13 +3452,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1819980728}
   m_TextComponent: {fileID: 2086647625}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -3559,13 +3610,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1864998668}
   m_TextComponent: {fileID: 499220779}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -3768,13 +3819,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1912301085}
   m_TextComponent: {fileID: 723360697}
   m_Placeholder: {fileID: 0}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -4075,7 +4126,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1926675417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180661293}
+        m_TargetAssemblyTypeName: ResultView, LonjaAD
+        m_MethodName: calculateButton_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 596993153}
+        m_TargetAssemblyTypeName: ResultView, LonjaAD
+        m_MethodName: calculateButton_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1449870495}
+        m_TargetAssemblyTypeName: ResultView, LonjaAD
+        m_MethodName: calculateButton_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1926675417
 MonoBehaviour:
   m_ObjectHideFlags: 0
