@@ -15,4 +15,10 @@ public class Cost
         costsTotal = truckLoadingCost + (kms * kmPrice) + (salesTotal * ((kms / kmsNeededForDeprecationApply) * kmDeprecation));
         return costsTotal;
     }
+
+    public float CalculateCostCity(float salesTotal, ICity city)
+    {
+        costsTotal = truckLoadingCost + (city.km * kmPrice) + (salesTotal * ((city.km / kmsNeededForDeprecationApply) * kmDeprecation));
+        return costsTotal;
+    }
 }

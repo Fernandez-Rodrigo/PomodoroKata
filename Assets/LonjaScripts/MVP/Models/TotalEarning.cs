@@ -4,6 +4,7 @@ public class TotalEarning
     {
 
     }
+
     public float CalculateTotalEarnings(float salesTotal, float costs)
     {
         return salesTotal - costs;
