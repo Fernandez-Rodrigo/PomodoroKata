@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barcelona : MonoBehaviour
+public class Barcelona : MonoBehaviour, ICity
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float vieirasPrice;
+    private float centollaPrice;
+    private float pulpoPrice;
+    public float VieirasPrice { get => 450; set => vieirasPrice = value; }
+    public float CentollasPrice { get => 0; set => centollaPrice = value; }
+    public float PulpoPrice { get => 120 ; set => pulpoPrice = value; }
 
-    // Update is called once per frame
-    void Update()
+    public float km => 1100;
+
+    public void SetVieriasPrice(float price)
     {
-        
+        vieirasPrice = price;
     }
 }

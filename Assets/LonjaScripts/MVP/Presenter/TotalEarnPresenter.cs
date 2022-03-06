@@ -8,17 +8,20 @@ public class TotalEarnPresenter
     private TotalEarning totalEarning;
     private Sale sale;
     private Cost cost;
-
+    private ICity city;
     float totalSale;
     float totalCost;
 
     public TotalEarnPresenter(ITotalEarningView totalEarningView)
     {
+
         this.totalEarningView = totalEarningView;
         totalEarning = new TotalEarning();
         sale = new Sale();
         cost = new Cost();
     }
+
+  
     private float CalculateSalePrice(float vieirasPrice, float centollaPrice, float pulpoPirce)
     {
         float result = sale.CalculateSale(vieirasPrice, centollaPrice, pulpoPirce);
@@ -29,20 +32,25 @@ public class TotalEarnPresenter
         float result = cost.CalculateCost(salePrice, kms);
         return result;
     }
+
+
+
     private float CalculateTotalEarning()
     {
-        float vieiraPrice = float.Parse(totalEarningView.GetVieiraPrice());
-        float centollaPrice = float.Parse(totalEarningView.GetCentollaPrice());
-        float pulpoPrice = float.Parse(totalEarningView.GetPulpoPrice());
-
-        totalSale = CalculateSalePrice(vieiraPrice, centollaPrice, pulpoPrice);
-        totalCost = CalculateCostPrice(totalSale, 800);
+        //float vieirasPrice = float.Parse(totalEarningView.GetVieiraPrice());
+        //float centollaPrice = float.Parse(totalEarningView.GetCentollaPrice());
+        //float pulpoPrice = float.Parse(totalEarningView.GetPulpoPrice());
+        totalSale = CalculateSalePrice(city.VieirasPrice, city.CentollasPrice, city.PulpoPrice);
+        totalCost = CalculateCostPrice(totalSale, city.km);
         return totalEarning.CalculateTotalEarnings(totalSale, totalCost);
     }
-
+       
     public void ActualizarVista() {
+
         totalEarningView.SetResultText(CalculateTotalEarning().ToString());
     }
+
+
     public void ValidarCamposVieira(string str)
     {
         if (str.StartsWith("-"))
@@ -76,4 +84,20 @@ public class TotalEarnPresenter
             totalEarningView.SetPulpoPrice("0");
         }
     }
+
+
+
+
+    public void SetInitialPrices(ICity city)
+    {
+        totalEarningView.SetCentollaPrice(city.CentollasPrice.ToString());
+        totalEarningView.SetVieiraPrice(city.VieirasPrice.ToString());
+        totalEarningView.SetPulpoPrice(city.PulpoPrice.ToString());
+    }
+
+    public void SetCity(ICity _city)
+    {
+        city = _city;
+    }
+
 }

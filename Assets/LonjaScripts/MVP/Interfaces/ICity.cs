@@ -4,9 +4,12 @@ using UnityEngine;
 
 public interface ICity 
 {
-    float vieirasPrice { get; set; }
-    float centollasPrice { get; set; }
-    float pulpoPrice { get; set; }
-    float km { get; set; }
+    float VieirasPrice { get; set; }
+    float CentollasPrice { get; set; }
+    float PulpoPrice { get; set; }
+    float km { get; }
+
+    void SetVieriasPrice(float price);
+    
 
 }

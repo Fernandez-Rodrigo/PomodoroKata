@@ -1432,6 +1432,7 @@ GameObject:
   - component: {fileID: 596993152}
   - component: {fileID: 596993151}
   - component: {fileID: 596993153}
+  - component: {fileID: 596993154}
   m_Layer: 5
   m_Name: VentaTotalBarc
   m_TagString: Untagged
@@ -1571,6 +1572,21 @@ MonoBehaviour:
   centollaPriceField: {fileID: 1770136031}
   pulpoPriceField: {fileID: 1819980727}
   resultText: {fileID: 596993151}
+  madrid: {fileID: 1180661294}
+  barcelona: {fileID: 596993154}
+  lisboa: {fileID: 1449870496}
+--- !u!114 &596993154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596993149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5b11b14d051a84ab8bbdb69b40f967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &723360695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,6 +2432,7 @@ GameObject:
   - component: {fileID: 1180661292}
   - component: {fileID: 1180661291}
   - component: {fileID: 1180661293}
+  - component: {fileID: 1180661294}
   m_Layer: 5
   m_Name: VentaTotalMadrid
   m_TagString: Untagged
@@ -2555,6 +2572,21 @@ MonoBehaviour:
   centollaPriceField: {fileID: 1912301084}
   pulpoPriceField: {fileID: 50739340}
   resultText: {fileID: 1180661291}
+  madrid: {fileID: 1180661294}
+  barcelona: {fileID: 596993154}
+  lisboa: {fileID: 1449870496}
+--- !u!114 &1180661294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180661289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90a9b9cb46a5af4a92bb8c595f2146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1294319158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +2812,7 @@ GameObject:
   - component: {fileID: 1449870494}
   - component: {fileID: 1449870493}
   - component: {fileID: 1449870495}
+  - component: {fileID: 1449870496}
   m_Layer: 5
   m_Name: VentaTotalLisboa
   m_TagString: Untagged
@@ -2919,6 +2952,21 @@ MonoBehaviour:
   centollaPriceField: {fileID: 416293312}
   pulpoPriceField: {fileID: 1864998667}
   resultText: {fileID: 1449870493}
+  madrid: {fileID: 1180661294}
+  barcelona: {fileID: 596993154}
+  lisboa: {fileID: 1449870496}
+--- !u!114 &1449870496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449870491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb11d41f8b0b140ae141256003049e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1515542459
 GameObject:
   m_ObjectHideFlags: 0

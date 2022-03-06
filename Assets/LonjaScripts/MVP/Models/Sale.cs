@@ -16,15 +16,10 @@ public class Sale
         salesTotal = (VIEIRAS_QTY * vieiraPrice) + (CENTOLLAS_QTY * centollaPrice) + (PULPO_QTY * pulpoPrice);
         return salesTotal;
     }
-
-
-    public void SetCity(ICity _city) // Esto se puede hacer en el presentador donde se ejecutan los métodos
-    {
-        city = _city;
-    }
+      
     public float CalculateSaleStrategy(ICity city)
     {
-        salesTotal = (VIEIRAS_QTY * city.vieirasPrice) + (CENTOLLAS_QTY * city.centollasPrice) + (PULPO_QTY * city.pulpoPrice);
+        salesTotal = (VIEIRAS_QTY * city.VieirasPrice) + (CENTOLLAS_QTY * city.CentollasPrice) + (PULPO_QTY * city.PulpoPrice);
         return salesTotal;
     }
 

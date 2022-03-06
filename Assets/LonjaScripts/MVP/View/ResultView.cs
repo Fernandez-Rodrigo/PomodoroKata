@@ -15,12 +15,23 @@ public class ResultView : MonoBehaviour, ISaleView, ICostView, ITotalEarningView
     [SerializeField]
     private TextMeshProUGUI resultText;
 
+
+    [SerializeField]
+    private Madrid madrid;
+    [SerializeField]
+    private Barcelona barcelona;
+    [SerializeField]
+    private Lisboa lisboa;
+
+    private ICity city;
     TotalEarnPresenter _totalEarningPresenter;
 
-    // Start is called before the first frame update
     void Start()
     {
         _totalEarningPresenter = new TotalEarnPresenter(this);
+        city = this.GetComponent<ICity>();
+        SetInitialValues(); // Agregado
+      
     }
 
     // Update is called once per frame
@@ -51,11 +62,24 @@ public class ResultView : MonoBehaviour, ISaleView, ICostView, ITotalEarningView
     {
         pulpoPriceField.text = str;
     }
+
     public void SetResultText(string value) {
         resultText.text = value;
     }
     public void calculateButton_Listener()
     {
+        SetCity(); // Agregado
         _totalEarningPresenter.ActualizarVista();
+    }
+
+    public void SetCity()
+    {
+        city.CentollasPrice = 999;
+        _totalEarningPresenter.SetCity(this.GetComponent<ICity>());
+    }
+
+    public void SetInitialValues()
+    {
+       _totalEarningPresenter.SetInitialPrices(this.GetComponent<ICity>());
     }
 }
