@@ -15,14 +15,6 @@ public class ResultView : MonoBehaviour, ISaleView, ICostView, ITotalEarningView
     [SerializeField]
     private TextMeshProUGUI resultText;
 
-
-    [SerializeField]
-    private Madrid madrid;
-    [SerializeField]
-    private Barcelona barcelona;
-    [SerializeField]
-    private Lisboa lisboa;
-
     private ICity city;
     TotalEarnPresenter _totalEarningPresenter;
 
@@ -34,21 +26,14 @@ public class ResultView : MonoBehaviour, ISaleView, ICostView, ITotalEarningView
       
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        _totalEarningPresenter.ValidarCamposVieira(vieiraPriceField.text);
-        _totalEarningPresenter.ValidarCamposCentolla(centollaPriceField.text);
-        _totalEarningPresenter.ValidarCamposPulpo(pulpoPriceField.text);
-    }
     public string GetVieiraPrice() {
         return vieiraPriceField.text;
     }
     public string GetCentollaPrice() {
-        return vieiraPriceField.text;
+        return centollaPriceField.text;
     }
     public string GetPulpoPrice() {
-        return vieiraPriceField.text;
+        return pulpoPriceField.text;
     }
     public void SetVieiraPrice(string str)
     {
@@ -74,8 +59,7 @@ public class ResultView : MonoBehaviour, ISaleView, ICostView, ITotalEarningView
 
     public void SetCity()
     {
-        city.CentollasPrice = 999;
-        _totalEarningPresenter.SetCity(this.GetComponent<ICity>());
+       _totalEarningPresenter.SetCity(this.GetComponent<ICity>());
     }
 
     public void SetInitialValues()

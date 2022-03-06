@@ -7,13 +7,15 @@ public class Madrid : MonoBehaviour, ICity
     private float vieirasPrice;
     private float centollaPrice;
     private float pulpoPrice;
-    public float VieirasPrice { get => 500; set => vieirasPrice = value; }
-    public float CentollasPrice { get => 450 ; set => centollaPrice = value; }
-    public float PulpoPrice { get => 0 ; set => pulpoPrice = value; }
+    public float VieirasPrice { get => vieirasPrice; set => vieirasPrice = value; }
+    public float CentollasPrice { get => centollaPrice; set => centollaPrice = value; }
+    public float PulpoPrice { get => pulpoPrice; set => pulpoPrice = value; }
     public float km { get => 800; }
 
-    public void SetVieriasPrice(float price)
-    {
-        vieirasPrice = price;
+    private void Awake()
+    { //TODO: intentar sacar monob y poner un constructor
+        vieirasPrice = 500;
+        centollaPrice = 450;
+        pulpoPrice = 0;
     }
 }

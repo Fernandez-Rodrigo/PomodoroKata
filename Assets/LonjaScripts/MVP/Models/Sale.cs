@@ -5,7 +5,6 @@ public class Sale
     private const float CENTOLLAS_QTY = 50;
     private const float PULPO_QTY = 100;
     private float salesTotal;
-    private ICity city;
     public Sale()
     {
 

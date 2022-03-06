@@ -8,8 +8,6 @@ public interface ICity
     float CentollasPrice { get; set; }
     float PulpoPrice { get; set; }
     float km { get; }
-
-    void SetVieriasPrice(float price);
     
 
 }

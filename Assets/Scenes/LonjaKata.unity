@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 50739341}
   - component: {fileID: 50739340}
   - component: {fileID: 50739343}
+  - component: {fileID: 50739344}
   m_Layer: 5
   m_Name: InputFieldPrecioV (1)
   m_TagString: Untagged
@@ -415,6 +416,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 0.37177002, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &50739344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50739338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85920006
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +441,7 @@ GameObject:
   - component: {fileID: 85920009}
   - component: {fileID: 85920008}
   - component: {fileID: 85920011}
+  - component: {fileID: 85920012}
   m_Layer: 5
   m_Name: InputFieldPrecioV
   m_TagString: Untagged
@@ -573,6 +587,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 0.08018869, b: 0.08018869, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &85920012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85920006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &141889614
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +985,7 @@ GameObject:
   - component: {fileID: 416293313}
   - component: {fileID: 416293312}
   - component: {fileID: 416293315}
+  - component: {fileID: 416293316}
   m_Layer: 5
   m_Name: InputFieldPrecioP (2)
   m_TagString: Untagged
@@ -1104,6 +1131,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.033018887, g: 1, b: 0.99116457, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &416293316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416293310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &460819641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1156,7 @@ GameObject:
   - component: {fileID: 460819644}
   - component: {fileID: 460819643}
   - component: {fileID: 460819646}
+  - component: {fileID: 460819647}
   m_Layer: 5
   m_Name: InputFieldPrecioP
   m_TagString: Untagged
@@ -1262,6 +1302,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 0.08018869, b: 0.08018869, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &460819647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460819641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &499220777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,9 +1561,9 @@ MonoBehaviour:
   m_fontSize: 90
   m_fontSizeBase: 90
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 90
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -1572,9 +1624,6 @@ MonoBehaviour:
   centollaPriceField: {fileID: 1770136031}
   pulpoPriceField: {fileID: 1819980727}
   resultText: {fileID: 596993151}
-  madrid: {fileID: 1180661294}
-  barcelona: {fileID: 596993154}
-  lisboa: {fileID: 1449870496}
 --- !u!114 &596993154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,6 +1727,7 @@ GameObject:
   - component: {fileID: 740595271}
   - component: {fileID: 740595270}
   - component: {fileID: 740595269}
+  - component: {fileID: 740595273}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1766,6 +1816,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &740595273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740595268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6b6ab6a8858b41ae2c73b3ab49260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resultsText:
+  - {fileID: 1180661291}
+  - {fileID: 596993151}
+  - {fileID: 1449870493}
 --- !u!1 &798688516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2258,7 @@ GameObject:
   - component: {fileID: 1114444234}
   - component: {fileID: 1114444233}
   - component: {fileID: 1114444236}
+  - component: {fileID: 1114444237}
   m_Layer: 5
   m_Name: InputFieldPrecioC
   m_TagString: Untagged
@@ -2337,6 +2404,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 0.08018869, b: 0.08018869, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1114444237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114444231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1143155849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,9 +2588,9 @@ MonoBehaviour:
   m_fontSize: 90
   m_fontSizeBase: 90
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 90
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -2572,9 +2651,6 @@ MonoBehaviour:
   centollaPriceField: {fileID: 1912301084}
   pulpoPriceField: {fileID: 50739340}
   resultText: {fileID: 1180661291}
-  madrid: {fileID: 1180661294}
-  barcelona: {fileID: 596993154}
-  lisboa: {fileID: 1449870496}
 --- !u!114 &1180661294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,9 +2965,9 @@ MonoBehaviour:
   m_fontSize: 90
   m_fontSizeBase: 90
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 90
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -2952,9 +3028,6 @@ MonoBehaviour:
   centollaPriceField: {fileID: 416293312}
   pulpoPriceField: {fileID: 1864998667}
   resultText: {fileID: 1449870493}
-  madrid: {fileID: 1180661294}
-  barcelona: {fileID: 596993154}
-  lisboa: {fileID: 1449870496}
 --- !u!114 &1449870496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3272,6 +3345,7 @@ GameObject:
   - component: {fileID: 1770136032}
   - component: {fileID: 1770136031}
   - component: {fileID: 1770136034}
+  - component: {fileID: 1770136035}
   m_Layer: 5
   m_Name: InputFieldPrecioC (2)
   m_TagString: Untagged
@@ -3417,6 +3491,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.033018887, g: 1, b: 0.99116457, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1770136035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770136029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1819980725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,6 +3516,7 @@ GameObject:
   - component: {fileID: 1819980728}
   - component: {fileID: 1819980727}
   - component: {fileID: 1819980730}
+  - component: {fileID: 1819980731}
   m_Layer: 5
   m_Name: InputFieldPrecioC (1)
   m_TagString: Untagged
@@ -3575,6 +3662,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 0.37177002, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1819980731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819980725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1864998665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,6 +3687,7 @@ GameObject:
   - component: {fileID: 1864998668}
   - component: {fileID: 1864998667}
   - component: {fileID: 1864998670}
+  - component: {fileID: 1864998671}
   m_Layer: 5
   m_Name: InputFieldPrecioP (1)
   m_TagString: Untagged
@@ -3733,6 +3833,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 0.37177002, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1864998671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864998665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1899927684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,6 +3909,7 @@ GameObject:
   - component: {fileID: 1912301085}
   - component: {fileID: 1912301084}
   - component: {fileID: 1912301087}
+  - component: {fileID: 1912301088}
   m_Layer: 5
   m_Name: InputFieldPrecioV (2)
   m_TagString: Untagged
@@ -3942,6 +4055,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.033018887, g: 1, b: 0.99116457, a: 0.5}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1912301088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912301082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da1f76da61e58a4390a200331272e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1924312176
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,6 +4327,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1449870495}
         m_TargetAssemblyTypeName: ResultView, LonjaAD
         m_MethodName: calculateButton_Listener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 740595273}
+        m_TargetAssemblyTypeName: SceneView, LonjaAD
+        m_MethodName: ActualizarColor_Lister
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

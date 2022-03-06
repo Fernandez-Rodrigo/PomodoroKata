@@ -11,6 +11,5 @@ public interface ITotalEarningView
     void SetVieiraPrice(string str);
     void SetCentollaPrice(string str);
     void SetPulpoPrice(string str);
-
-
+      
 }
