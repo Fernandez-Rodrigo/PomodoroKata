@@ -21,19 +21,17 @@ public class TotalEarnPresenter
         cost = new Cost();
     }
 
-  
-    private float CalculateSalePrice(float vieirasPrice, float centollaPrice, float pulpoPirce)
-    {
-        float result = sale.CalculateSale(vieirasPrice, centollaPrice, pulpoPirce);
-        return result;
-    }
-    private float CalculateCostPrice(float salePrice, float kms)
-    {
-        float result = cost.CalculateCost(salePrice, kms);
-        return result;
-    }
 
-
+    //private float CalculateSalePrice(float vieirasPrice, float centollaPrice, float pulpoPirce)
+    //{
+    //    float result = sale.CalculateSale(vieirasPrice, centollaPrice, pulpoPirce);
+    //    return result;
+    //}
+    //private float CalculateCostPrice(float salePrice, float kms)
+    //{
+    //    float result = cost.CalculateCost(salePrice, kms);
+    //    return result;
+    //}
 
     private float CalculateTotalEarning()
     {

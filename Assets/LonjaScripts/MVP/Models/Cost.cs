@@ -10,15 +10,15 @@ public class Cost
     {
     }
 
-    public float CalculateCost(float salesTotal, float kms)
-    {
-        costsTotal = truckLoadingCost + (kms * kmPrice) + (salesTotal * ((kms / kmsNeededForDeprecationApply) * kmDeprecation));
-        return costsTotal;
-    }
+    //public float CalculateCost(float salesTotal, float kms)
+    //{
+    //    costsTotal = truckLoadingCost + (kms * kmPrice) + (salesTotal * ((kms / kmsNeededForDeprecationApply) * kmDeprecation));
+    //    return costsTotal;
+    //}
 
     public float CalculateCostCity(float salesTotal, ICity city)
     {
-        costsTotal = truckLoadingCost + (city.km * kmPrice) + (salesTotal * ((city.km / kmsNeededForDeprecationApply) * kmDeprecation));
+        costsTotal = truckLoadingCost + (city.Km * kmPrice) + (salesTotal * ((city.Km / kmsNeededForDeprecationApply) * kmDeprecation));
         return costsTotal;
     }
 }

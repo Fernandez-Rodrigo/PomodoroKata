@@ -1,14 +1,23 @@
 using NUnit.Framework;
-
+using NSubstitute;
 public class CalculatorShould
 {
     Sale sale;
     Cost cost;
+    ICity city;
+
+    float salePrice;
+    float costPrice;
 
     [SetUp]
     public void Setup() {
         sale = new Sale();
         cost = new Cost();
+        city = Substitute.For<ICity>();
+        city.VieirasPrice.Returns(100);
+        city.PulpoPrice.Returns(100);
+        city.CentollasPrice.Returns(100);
+        city.Km.Returns(800);
     }
     [Test]
     public void CalculatorShouldSimplePasses()
@@ -16,10 +25,10 @@ public class CalculatorShould
     }
     [Test]
     public void CalculateSales()
-    {   
+    {
         //Arrange
         //Act
-        float salePrice = sale.CalculateSale(100, 100, 100);
+        salePrice = sale.CalculateSaleStrategy(city);
         //Assert
         Assert.AreEqual(20000, salePrice);
     }
@@ -28,7 +37,8 @@ public class CalculatorShould
     {
         //Arrange
         //Act
-        float costPrice = cost.CalculateCost(20000, 800);
+        salePrice = sale.CalculateSaleStrategy(city);
+        costPrice = cost.CalculateCostCity(salePrice, city);
         //Assert
         Assert.AreEqual(3205, costPrice);
     }
@@ -37,11 +47,9 @@ public class CalculatorShould
     {  
         //Arrange
         TotalEarning totalEarning = new TotalEarning();
-        float salePrice;
-        float costPrice;
         //Act
-        salePrice = sale.CalculateSale(100, 100, 100);
-        costPrice = cost.CalculateCost(20000, 800);
+        salePrice = sale.CalculateSaleStrategy(city);
+        costPrice = cost.CalculateCostCity(salePrice, city);
         float result = totalEarning.CalculateTotalEarnings(salePrice, costPrice);
         //Assert
         Assert.AreEqual(16795, result);

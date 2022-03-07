@@ -14,14 +14,13 @@ public class ResultView : MonoBehaviour, ISaleView, ICostView, ITotalEarningView
     private InputField pulpoPriceField;
     [SerializeField]
     private TextMeshProUGUI resultText;
-
-    private ICity city;
+    [SerializeField]
+    private CitySO city;
     TotalEarnPresenter _totalEarningPresenter;
 
     void Start()
     {
         _totalEarningPresenter = new TotalEarnPresenter(this);
-        city = this.GetComponent<ICity>();
         SetInitialValues(); // Agregado
       
     }
@@ -59,11 +58,11 @@ public class ResultView : MonoBehaviour, ISaleView, ICostView, ITotalEarningView
 
     public void SetCity()
     {
-       _totalEarningPresenter.SetCity(this.GetComponent<ICity>());
+       _totalEarningPresenter.SetCity(city);
     }
 
     public void SetInitialValues()
     {
-       _totalEarningPresenter.SetInitialPrices(this.GetComponent<ICity>());
+       _totalEarningPresenter.SetInitialPrices(city);
     }
 }

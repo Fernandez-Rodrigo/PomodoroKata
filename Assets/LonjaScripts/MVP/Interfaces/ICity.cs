@@ -7,7 +7,6 @@ public interface ICity
     float VieirasPrice { get; set; }
     float CentollasPrice { get; set; }
     float PulpoPrice { get; set; }
-    float km { get; }
+    float Km { get; }
     
-
 }
