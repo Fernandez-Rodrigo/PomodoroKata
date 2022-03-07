@@ -9,6 +9,7 @@ public class Pomodoro
     private const float DEFAULT_INIT_TIME = 25;
     private float totalRestingTime;
     private float restingTime;
+    private float initialTime;
     private float timeLeft;
     private States state;
     private float finalRestingTime;
@@ -28,6 +29,7 @@ public class Pomodoro
         timeLeft = selectedTime;
         restingTime = Mathf.Floor(selectedTime  * 5 / 25);
         if (restingTime == 0) restingTime = 1;
+        initialTime = selectedTime;
         totalRestingTime = restingTime;
         //  finalRestingTime = totalRestingTime * 4;
         finalRestingTime = 10;
@@ -35,6 +37,10 @@ public class Pomodoro
     public float GetRestingTime()
     {
         return restingTime;
+    }
+    public float GetInitialTime()
+    {
+        return initialTime;
     }
     public float GetTotalRestingTime()
     {

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public interface IPomodoroView 
 {
-    //float GetTime();
+    void SetLoadingBarFillAmount(float fillAmount);
+    void SetRestingBarFillAmount(float fillAmount);
+    void SetStateText(string str);
+    void SetPomodoroTimeText(string str);
 }

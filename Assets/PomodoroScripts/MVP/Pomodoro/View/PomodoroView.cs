@@ -29,12 +29,29 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
     void Update()
     {
         ManageStates();
+        _pomodoroPresenter.ManageStates();
         //TODO : hacerlo con unirx
-        loadingBar.fillAmount = mainSceneView.timeInput.text != "" ? GetCurrentStudyTime() / float.Parse(mainSceneView.timeInput.text) : 1;
-        restingLoadingBar.fillAmount = GetCurrentStudyTime() == 0 ? GetCurrentRestingTime() / _pomodoroPresenter.GetTotalRestingTime() : 1;
-        pomodoroStateText.text = _pomodoroPresenter.GetState().ToString();
-    }
+        _pomodoroPresenter.RefreshFillAmount();
+        _pomodoroPresenter.RefreshRestingFillAmount();
 
+        _pomodoroPresenter.RefreshStateText();
+    }
+    public void SetStateText(string str)
+    {
+        pomodoroStateText.text = str;
+    }
+    public void SetPomodoroTimeText(string str)
+    {
+        pomodoroText.text = str;
+    }
+    public void SetLoadingBarFillAmount(float fillAmount)
+    {
+        loadingBar.fillAmount = fillAmount;
+    }
+    public void SetRestingBarFillAmount(float fillAmount)
+    {
+        restingLoadingBar.fillAmount = fillAmount;
+    }
     public float GetCurrentStudyTime()
     {
         return _pomodoroPresenter.GetStudyTime();
@@ -43,6 +60,7 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
     {
         return _pomodoroPresenter.GetRestingTime();
     }
+
     public IEnumerator CountDown()
     {
         for (counter = GetCurrentStudyTime(); counter > 0; counter--)
@@ -65,8 +83,6 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
         yield return new WaitForSeconds(1);
         mainSceneView.ChangeCurrentPomodoro();
     }
-    #region 
-    //Nuevos metodos
     private void ManageStates()
     {
         switch (_pomodoroPresenter.GetState())
@@ -77,21 +93,15 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
             case States.Starting:
                 mainSceneView.SetStartTime();
                 mainSceneView.SetInputStartStopState(true, true, false);
-                pomodoroText.text = GetCurrentStudyTime().ToString();
                 break;
             case States.Initialized:
                 mainSceneView.SetInputStartStopState(false, false, true);
-                pomodoroText.text = GetCurrentStudyTime().ToString();
                 break;
             case States.Resting:
                 mainSceneView.SetInputStartStopState(false, false, false);
-                pomodoroText.text = GetCurrentRestingTime().ToString();
                 break;
             case States.Finished:
-                pomodoroText.text = GetCurrentRestingTime().ToString();
                 break;
         }
     }
-
-    #endregion
 }

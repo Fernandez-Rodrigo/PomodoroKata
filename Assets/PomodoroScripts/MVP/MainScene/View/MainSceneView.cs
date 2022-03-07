@@ -57,7 +57,8 @@ public class MainSceneView : MonoBehaviour
         currentPomodoroIndex = 0;
         ResumeTimer();
     }
-    private void ResumeTimer() {
+    private void ResumeTimer()
+    {
         currentPomodoro = pomodoroView[currentPomodoroIndex];
         currentPomodoro.GetComponent<PomodoroView>().enabled = true;
 

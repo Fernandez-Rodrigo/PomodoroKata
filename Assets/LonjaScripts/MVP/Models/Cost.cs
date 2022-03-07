@@ -10,13 +10,7 @@ public class Cost
     {
     }
 
-    //public float CalculateCost(float salesTotal, float kms)
-    //{
-    //    costsTotal = truckLoadingCost + (kms * kmPrice) + (salesTotal * ((kms / kmsNeededForDeprecationApply) * kmDeprecation));
-    //    return costsTotal;
-    //}
-
-    public float CalculateCostCity(float salesTotal, ICity city)
+    public float CalculateCost(float salesTotal, ICity city)
     {
         costsTotal = truckLoadingCost + (city.Km * kmPrice) + (salesTotal * ((city.Km / kmsNeededForDeprecationApply) * kmDeprecation));
         return costsTotal;

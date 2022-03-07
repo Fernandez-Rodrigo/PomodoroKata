@@ -28,7 +28,7 @@ public class CalculatorShould
     {
         //Arrange
         //Act
-        salePrice = sale.CalculateSaleStrategy(city);
+        salePrice = sale.CalculateSale(city);
         //Assert
         Assert.AreEqual(20000, salePrice);
     }
@@ -37,8 +37,8 @@ public class CalculatorShould
     {
         //Arrange
         //Act
-        salePrice = sale.CalculateSaleStrategy(city);
-        costPrice = cost.CalculateCostCity(salePrice, city);
+        salePrice = sale.CalculateSale(city);
+        costPrice = cost.CalculateCost(salePrice, city);
         //Assert
         Assert.AreEqual(3205, costPrice);
     }
@@ -48,8 +48,8 @@ public class CalculatorShould
         //Arrange
         TotalEarning totalEarning = new TotalEarning();
         //Act
-        salePrice = sale.CalculateSaleStrategy(city);
-        costPrice = cost.CalculateCostCity(salePrice, city);
+        salePrice = sale.CalculateSale(city);
+        costPrice = cost.CalculateCost(salePrice, city);
         float result = totalEarning.CalculateTotalEarnings(salePrice, costPrice);
         //Assert
         Assert.AreEqual(16795, result);

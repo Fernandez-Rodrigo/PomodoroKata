@@ -7,9 +7,6 @@ using Assets.Scripts.Pomodoro.Enums;
 
 public class PomodoroShould
 {
-    
-    
-
     [Test]
     public void TimerShouldSimplePasses()
     {
@@ -81,50 +78,5 @@ public class PomodoroShould
     }
 
 }
-
-
-
-//public class PomodoroStoped : IPomodoroStates
-//{
-//    private float timeLeft;
-//    public PomodoroStoped()
-//    {
-//        timeLeft = 25;
-//    }
-//    /*ESTADOS
-//     * PARADO
-//     * Inicializado / corriendo
-//     * DETENIDO / Finalizado
-//     * Descanso
-//     */
-//    public float GetTimeLeft()
-//    {
-//        return timeLeft;
-//    }
-
-//    public void SetTimeLeft(float selectedTime)
-//    {
-//        timeLeft = selectedTime;
-//    }
-//}
-
-
-//public class PomodoroInitialized : IPomodoroStates
-//{
-//    private float timeLeft;
-//    public PomodoroInitialized(float _timeLeft)
-//    {
-//        timeLeft = _timeLeft;
-//    }
-
-//    public float GetTimeLeft()
-//    {
-//        return timeLeft;
-//    }
-    
-//}
-//public interface IPomodoroStates {
-//    float GetTimeLeft();
-//}
 
 

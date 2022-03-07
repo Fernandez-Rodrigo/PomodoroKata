@@ -10,9 +10,46 @@ public class PomodoroPresenter
     public PomodoroPresenter(IPomodoroView _pomodoroView)
     {
         pomodoro = new Pomodoro();
-        pomodoroView = _pomodoroView;   
+        pomodoroView = _pomodoroView;
     }
 
+    public void RefreshFillAmount() {
+        float result = pomodoro.GetStudyTime() / pomodoro.GetInitialTime();
+        pomodoroView.SetLoadingBarFillAmount(result);
+    }
+    public Pomodoro GetPomodoro() {
+        return pomodoro;
+    }
+    public void RefreshRestingFillAmount()
+    {
+        float result = pomodoro.GetRestingTime() / pomodoro.GetTotalRestingTime();
+        pomodoroView.SetRestingBarFillAmount(result);
+    }
+    public void RefreshStateText() {
+        pomodoroView.SetStateText(pomodoro.GetState().ToString());
+    }
+    public void ManageStates() {
+        switch (pomodoro.GetState())
+        {
+            case States.Starting:
+                pomodoroView.SetPomodoroTimeText(pomodoro.GetStudyTime().ToString());
+              //  pomodoro.SetStudyAndRestingTime();
+                break;
+            case States.Initialized:
+                RefreshFillAmount();
+                pomodoroView.SetPomodoroTimeText(pomodoro.GetStudyTime().ToString());
+                break;
+            case States.Resting:
+                RefreshRestingFillAmount();
+                pomodoroView.SetPomodoroTimeText(pomodoro.GetRestingTime().ToString());
+                break;
+            case States.Finished:
+                pomodoroView.SetPomodoroTimeText(pomodoro.GetRestingTime().ToString());
+                break;
+        }
+    }
+
+    #region
     public float GetStudyTime()
     {
         return pomodoro.GetStudyTime();
@@ -73,4 +110,5 @@ public class PomodoroPresenter
     {
         return pomodoro.GetFinalRestingTime();
     }
+    #endregion
 }

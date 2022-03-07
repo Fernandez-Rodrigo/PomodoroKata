@@ -9,14 +9,8 @@ public class Sale
     {
 
     }
-
-    //public float CalculateSale(float vieiraPrice, float centollaPrice, float pulpoPrice)
-    //{
-    //    salesTotal = (VIEIRAS_QTY * vieiraPrice) + (CENTOLLAS_QTY * centollaPrice) + (PULPO_QTY * pulpoPrice);
-    //    return salesTotal;
-    //}
       
-    public float CalculateSaleStrategy(ICity city)
+    public float CalculateSale(ICity city)
     {
         salesTotal = (VIEIRAS_QTY * city.VieirasPrice) + (CENTOLLAS_QTY * city.CentollasPrice) + (PULPO_QTY * city.PulpoPrice);
         return salesTotal;

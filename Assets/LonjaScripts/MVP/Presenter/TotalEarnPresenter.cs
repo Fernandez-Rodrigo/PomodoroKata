@@ -39,8 +39,8 @@ public class TotalEarnPresenter
         city.CentollasPrice = float.Parse(totalEarningView.GetCentollaPrice());
         city.PulpoPrice = float.Parse(totalEarningView.GetPulpoPrice());
 
-        totalSale = sale.CalculateSaleStrategy(city);
-        totalCost = cost.CalculateCostCity(totalSale,city);
+        totalSale = sale.CalculateSale(city);
+        totalCost = cost.CalculateCost(totalSale,city);
         return totalEarning.CalculateTotalEarnings(totalSale, totalCost);
     }
        
