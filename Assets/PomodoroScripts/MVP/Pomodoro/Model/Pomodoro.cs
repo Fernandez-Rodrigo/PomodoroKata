@@ -17,7 +17,7 @@ public class Pomodoro
     {
         timeLeft = DEFAULT_INIT_TIME;
         state = States.Starting;
-        restingTime = 5;
+        restingTime = DEFAULT_INIT_TIME * 0.2f;
     }
 
     public float GetStudyTime()
@@ -31,8 +31,8 @@ public class Pomodoro
         if (restingTime == 0) restingTime = 1;
         initialTime = selectedTime;
         totalRestingTime = restingTime;
-        //  finalRestingTime = totalRestingTime * 4;
-        finalRestingTime = 10;
+        finalRestingTime = totalRestingTime * 4;
+        
     }
     public float GetRestingTime()
     {
@@ -95,5 +95,6 @@ public class Pomodoro
     }
     public float GetFinalRestingTime() {
         return finalRestingTime;
+        // Hacer el caluclo del resting time y trabajr solo con get resting time
     }
 }

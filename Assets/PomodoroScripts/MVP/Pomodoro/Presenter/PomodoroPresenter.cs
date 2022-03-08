@@ -13,6 +13,13 @@ public class PomodoroPresenter
         pomodoroView = _pomodoroView;
     }
 
+
+    public void StartCountDown()
+    {
+        pomodoroView.StartCountDownCoroutine(GetStudyTime(), GetRestingTime());
+    }
+
+
     public void RefreshFillAmount() {
         float result = pomodoro.GetStudyTime() / pomodoro.GetInitialTime();
         pomodoroView.SetLoadingBarFillAmount(result);

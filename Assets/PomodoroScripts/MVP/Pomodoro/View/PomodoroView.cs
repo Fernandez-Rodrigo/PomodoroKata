@@ -30,7 +30,6 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
     {
         ManageStates();
         _pomodoroPresenter.ManageStates();
-        //TODO : hacerlo con unirx
         _pomodoroPresenter.RefreshFillAmount();
         _pomodoroPresenter.RefreshRestingFillAmount();
 
@@ -61,27 +60,38 @@ public class PomodoroView : MonoBehaviour, IPomodoroView
         return _pomodoroPresenter.GetRestingTime();
     }
 
-    public IEnumerator CountDown()
+
+    public void StartCountDownCoroutine(float currentStudyTime, float currentRestingTime)
     {
-        for (counter = GetCurrentStudyTime(); counter > 0; counter--)
+        StartCoroutine(CountDown(currentStudyTime, currentRestingTime));
+       
+    }
+    
+
+    public IEnumerator CountDown(float currentStudyTime, float currentRestingTime)
+    {
+
+        for (counter = currentStudyTime; counter > 0; counter--)
         {
             yield return new WaitForSeconds(1);
             _pomodoroPresenter.StudyCountDown();
-            Debug.Log(GetCurrentStudyTime());
+            
         }
-        StartCoroutine(RestCountDown());
+        StartCoroutine(RestCountDown(currentRestingTime));
+
     }
 
-    IEnumerator RestCountDown()
+    IEnumerator RestCountDown(float currentRestingTime)
     {
-        for (counter = _pomodoroPresenter.GetRestingTime(); counter > 0; counter--)
+        for (counter = currentRestingTime; counter > 0; counter--)
         {
             yield return new WaitForSeconds(1);
             _pomodoroPresenter.RestingCountDown();
-            Debug.Log(GetCurrentRestingTime());
         }
         yield return new WaitForSeconds(1);
         mainSceneView.ChangeCurrentPomodoro();
+
+       
     }
     private void ManageStates()
     {

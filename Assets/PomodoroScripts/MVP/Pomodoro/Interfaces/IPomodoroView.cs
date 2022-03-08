@@ -8,4 +8,5 @@ public interface IPomodoroView
     void SetRestingBarFillAmount(float fillAmount);
     void SetStateText(string str);
     void SetPomodoroTimeText(string str);
+    void StartCountDownCoroutine(float currentStudyTime, float currentRestingTime);
 }

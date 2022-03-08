@@ -45,7 +45,6 @@ public class MainSceneView : MonoBehaviour
     }
     public IEnumerator FinalRestingCountdown()
     {
-
         for (float counter = currentPomodoro._pomodoroPresenter.GetFinalRestingTime(); counter > 0; counter--)
         {
             timeText.text = counter.ToString();
@@ -100,11 +99,11 @@ public class MainSceneView : MonoBehaviour
         if (currentPomodoro._pomodoroPresenter.GetState() == States.Initialized) return;
         SetStartTime();
         currentPomodoro._pomodoroPresenter.SetInitialized();
-        StartCoroutine(currentPomodoro.CountDown());
+        currentPomodoro.StartCountDownCoroutine(currentPomodoro.GetCurrentStudyTime(), currentPomodoro.GetCurrentRestingTime());
     }
     public void StopCountDown()
     {
         currentPomodoro._pomodoroPresenter.SetStoped();
-        StopAllCoroutines();
+        currentPomodoro.StopAllCoroutines();
     }
 }
